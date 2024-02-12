@@ -1,20 +1,25 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(app());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class app extends StatefulWidget {
+  const app({super.key});
+
+  @override
+  State<app> createState() => _RunMyAppState();
+}
+
+class _RunMyAppState extends State<app> {
+  void changeTheme(ThemeMode themeMode) {
+    setState(() {
+      // TODO: implement theme
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
+    return const MaterialApp();
   }
 }
